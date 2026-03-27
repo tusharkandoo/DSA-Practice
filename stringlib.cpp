@@ -1,9 +1,13 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+using namespace std;
 int main() {
 	string s1;
 	getline(cin,s1);
 	cout<<s1.substr(0,3);//yeh bol raha hai 0 character chor kar uskai kai 3 character print kara do
     cout<<endl<<s1.substr(3,3);//shuru kai 3 chor kar uskai baad kai 3 print kara do
-   cout<<endl<< s1.append(" Agarwal");// puri string(group of word) aage add karane kai liya
+   cout<<endl<< s1.append(" Kandoo");// puri string(group of word) aage add karane kai liya
    cout<<endl<<s1.erase(2,2);// iska matlab hai string kai shuru kai do chor kar uskai aage kai do erase kardo 
 	cout<<endl<<s1.find("u");//joo character search karna hota hai uski location batat hai
     cout<<endl<<s1.at(1);// 1 index  par kya character hai voh print hoga
