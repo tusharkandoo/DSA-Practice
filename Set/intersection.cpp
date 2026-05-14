@@ -36,7 +36,8 @@ int main() {
     for(int v:s5){
         cout<<v<<" ";
     }
-    cout<<endl;
+    cout<<endl; 
 }
+
 
 
