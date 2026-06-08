@@ -15,9 +15,20 @@ int main(){
         s2.insert(x);
     }
     for(int v:s1){
-        int c=s2.count(v);
-        if (c==1)
-        s3.insert(v);
-
-   
+        if(s2.find(v)!=s2.end()){   //it give the intersection of two sets   if we use == then it gives the difference of two sets
+            s3.insert(v);
+        }
+    }
+    for(int v:s3){
+        cout<<v<<" ";
+    }
 }
+
+
+// Given two strings s1 and s2 having length n and m print the count of characters from s1 which are  also present in s2. 
+
+//Given an array of positive integer and another number K. Determine weather or not there exist two elements in the array whose sum is exactly K.
+
+
+
+//Given an unsorted integer array M return the smallest positive integer that is not present in nums.
