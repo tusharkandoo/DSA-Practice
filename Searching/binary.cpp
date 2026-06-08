@@ -1,35 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	int n;
+int main (){
+	int n,key;
+	cout<<"Enter the number of elements";
 	cin>>n;
-	int a[n];
-	for (int i=0;i<n;i++)
-	cin>>a[i];
-	int item;
-	int c =0;
-	cin>>item;
-	int beg=0;
-	int end =n-1;
-	for(int t=beg;t<=end;t++){
-	int mid = (beg+end)/2;
-	if ( a[mid]==item )
-	{
-	    cout<<"item found"<<mid;
-	    c++;
-	    break;
+	int arr[n];
+	cout<<"Enter sorted  elements ";
+	for (int i=0;i<n;i++){
+		cin>>arr[i];
 	}
-	else {
-	    if(a[mid]<item)
-	    beg=mid+1;
-	    else
-	    end=mid-1;
-    	}
-  if (c==0){
-      cout<<"not found";
-      break;
-  }
+	cout<<"Enter the key value to search";
+	cin>>key;
+	int low =0,high=n-1;
+	int pos =-1;
+	while (low<=high){
+		int mid = low+(high-low)/2;
+		if (arr[mid]==key){
+			pos = mid+1;
+			break;
+		}
+		else if (arr[mid]>key){
+			high = mid-1;
+		}
+		else{
+			low = mid+1;
+		}
 	}
-return 0;
+	if (pos !=-1){
+		cout<<"Element Found at: "<<pos;
+	}
+	else{
+		cout<<"Element not found";
+	}
+	return 0;
 }
