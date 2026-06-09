@@ -17,7 +17,7 @@ int main() {
     }
      cout<<endl;
     set_difference(M.begin(),M.end(),N.begin(),N.end(),inserter(S1,S1.begin()));
-    set_difference(M.begin(),M.end(),N.begin(),N.end(),inserter(S2,S2.begin()));
+    set_difference(N.begin(),N.end(),M.begin(),M.end(),inserter(S2,S2.begin()));
     P=S1.size();
     Q=S2.size();
    cout<<P*Q<<endl;
