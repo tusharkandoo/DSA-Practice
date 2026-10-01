@@ -21,16 +21,6 @@ void inorder(Node* root) {
     cout << root->data << " ";
     inorder(root->right);
 }
- void CreateTree(node *T){
-    int choice;
-    cout<<"We"
- }
-
-
-
-
-
-
 
 void preorder(Node* root) {
     if(root == NULL) return;
